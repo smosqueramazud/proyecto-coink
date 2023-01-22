@@ -1,3 +1,14 @@
+1. clonar repositorio, git clone https://github.com/smosqueramazud/proyecto-coink.git 
+2. dentro de la carpeta proyecto-coink, cambiar a la rama desarrollo, git checkout desarrollo
+3. npm install dentro de la carpeta proyecto-coink
+4. ng serve! desde el editor de codigo de preferencia
+5. Debe ingresar campos en los input de Usuario y contraseña para habilitar el boton de iniciar sesion
+
+
+@author Sebastian Mosquera Mazud / 2023
+
+
+
 # ProyectoCoink
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19.
