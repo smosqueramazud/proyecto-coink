@@ -40,13 +40,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderAppComponent } from './components/header-app/header-app.component';
 //---------------------------------//
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderAppComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +90,7 @@ import { HomeComponent } from './pages/home/home.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [HeaderAppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
