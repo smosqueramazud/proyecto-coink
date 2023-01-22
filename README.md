@@ -1,5 +1,5 @@
 1. clonar repositorio, git clone https://github.com/smosqueramazud/proyecto-coink.git 
-2. dentro de la carpeta proyecto-coink, cambiar a la rama desarrollo, git checkout desarrollo
+2. dentro de la carpeta proyecto-coink, cambiar a la rama master, git checkout master
 3. npm install dentro de la carpeta proyecto-coink
 4. ng serve! desde el editor de codigo de preferencia
 5. Debe ingresar campos en los input de Usuario y contraseña para habilitar el boton de iniciar sesion
