@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  title = '¡Bienvenido a la herramienta de registro Coink!';
+  subTitle= 'Coink para tu día a día. Empieza ahorrando y cumple tus sueños con propósito.';
+
   constructor() { }
 
   ngOnInit(): void {

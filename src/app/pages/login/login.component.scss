@@ -1,0 +1,212 @@
+.o-box {
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.o-box-left {
+    display: flex;
+    justify-content: center;
+    background-color: var(--blue-dark-color);
+}
+
+.o-box-left-items {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+.o-box-left-items-title--color {
+    color: var(--blue-light-color);
+}
+
+.o-box-left-items-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.o-box-left-items-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.o-box-left-items-title-imgP {
+    width: 45vh;
+}
+
+.o-box-left-items-box {
+    width: 80%;
+}
+
+.o-box-right {
+    background-color: var(--gray-light-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.o-box-right-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: 15%;
+    gap: 4vh;
+}
+
+.o-box-right-links-a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.o-box-right-links-a:hover {
+    font-size: 20px;
+    color: rgb(77, 182, 159);
+
+}
+
+.o-box-right-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 55%;
+    gap: 2vh;
+}
+
+.o-box-right-form-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--blue-dark-color);
+}
+
+.o-icon {
+    position: absolute;
+}
+
+.o-box-right-form-button {
+    width: 100%;
+    height: 5vh;
+}
+
+.o-box-right-form-inputs mat-icon {
+    position: absolute;
+    right: 10%;
+}
+
+.o-box-right-form-inputs {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #BDBDBD;
+    border-radius: 6px;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: var(--secundary-color) !important;
+}
+
+.o-text-recordar{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--secundary-color);
+}
+
+.o-box-right-buttons{
+    height: 35%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5vh;
+}
+
+.o-box-right-buttons-init{
+    width: 50%;
+    height: 5vh;
+    background-color: var(--secundary-color);
+    color: var(--tertiary-color);
+    box-shadow: 0px 3px 10px #0000001C;
+    border-radius: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.o-box-right-buttons-a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.o-box-right-buttons-a:hover {
+    font-size: 15px;
+
+}
+
+//Celulares
+@media (max-width: 1024px) {
+    .o-box {
+        grid-template-columns: 100%;
+    }
+
+    .o-box-left {
+        display: none;
+    }
+
+    .o-box-right-form-title {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .o-box-right-links{
+        justify-content: center;
+        width: 90%;
+    }
+
+    .o-box-right-links-a{
+        font-size: 13px;
+    }
+
+    .o-box-right-links-a:hover{
+        font-size: 14px;
+    }
+
+    .o-text-recordar{
+        font-size: 12px;
+    }
+
+    .o-box-right-buttons-a{
+        font-size: 12px;
+    }
+    
+    .o-box-right-buttons-a:hover {
+        font-size: 13px;
+    }
+
+    .o-box-right-buttons-init{
+        width: 60%;
+        height: 7vh;
+    }
+
+}
