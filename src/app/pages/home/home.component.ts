@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   arrayPersonajes: any;
   
 
-  displayedColumns: string[] = ['imagen', 'nombre', 'estado', 'especie', 'ultima locacion', 'ultimo episodio', 'modificar'];
+  displayedColumns: string[] = ['imagen', 'nombre', 'estado', 'especie', 'ultima locacion'];
   dataSource: MatTableDataSource<Personaje>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -73,6 +73,15 @@ export class HomeComponent implements OnInit {
     this.inactive = true;
   }
 
+  cleanFiltersMovil() {
+    this.nombre = '';
+    this.tipoPersonaje = '';
+    this.obtenerPersonajes();
+    this.disabledInput = false;
+    this.disabledInputTipo = false;
+    this.inactive = true;
+  }
+
   /**
  * @method obtenerPersonajes 
  * @description Metodo encargado de consumir el endpoint que trae todos los personajes
@@ -83,14 +92,12 @@ export class HomeComponent implements OnInit {
     this.endpoints.getPersonajes().subscribe(
       res => {
         this.arrayPersonajes = res.results;
-        console.log(this.arrayPersonajes);
         this.dataSource = new MatTableDataSource(this.arrayPersonajes);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
 
       },
       err => {
-        console.log(err)
         alert(`Ha ocurrido un error consultando la lista de personajes, por favor intenta de nuevo mas tarde`)
       }
     )
@@ -117,31 +124,47 @@ export class HomeComponent implements OnInit {
   }
 
   consultarPersonaje(){
+      if(this.nombre.length > 0){
+        let array =  this.arrayPersonajes.filter(per => per.name == this.nombre);
+        if(array.length > 0){
+          this.dataSource = new MatTableDataSource(array);
+          this.dataSource.paginator = this.paginator;
+          this.dataSource.sort = this.sort;
+        }else{
+          alert('Ingrese correctamente el nombre del personaje');
+        }
+      }else if(this.tipoPersonaje.length > 0){
+        let array =  this.arrayPersonajes.filter(per => per.species == this.tipoPersonaje);
+        if(array.length > 0){
+          this.dataSource = new MatTableDataSource(array);
+          this.dataSource.paginator = this.paginator;
+          this.dataSource.sort = this.sort;
+        }else{
+          alert('Ingrese correctamente el tipo del personaje');
+        }
+      }else{
+        alert('Ingrese el nombre o el tipo del personaje');
+      }
+  }
+
+  consultarPersonajeMovil(){
     if(this.nombre.length > 0){
       let array =  this.arrayPersonajes.filter(per => per.name == this.nombre);
-      console.log(array);
       if(array.length > 0){
-        this.dataSource = new MatTableDataSource(array);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+        this.arrayPersonajes = array;
       }else{
         alert('Ingrese correctamente el nombre del personaje');
       }
     }else if(this.tipoPersonaje.length > 0){
       let array =  this.arrayPersonajes.filter(per => per.species == this.tipoPersonaje);
-      console.log(array);
       if(array.length > 0){
-        this.dataSource = new MatTableDataSource(array);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+        this.arrayPersonajes = array;
       }else{
         alert('Ingrese correctamente el tipo del personaje');
       }
     }else{
       alert('Ingrese el nombre o el tipo del personaje');
     }
-
   }
-
 
 }

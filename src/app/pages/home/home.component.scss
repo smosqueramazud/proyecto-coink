@@ -1,4 +1,4 @@
-.o-box{
+.o-box {
     min-height: 100vh;
     /* mobile viewport bug fix */
     min-height: -webkit-fill-available;
@@ -6,28 +6,32 @@
     grid-template-columns: 17% 83%;
 }
 
-.o-box-links{
+.o-box-left {
+    display: block;
+}
+
+.o-box-links {
     height: 10%;
     padding: 0 5%;
     display: flex;
     align-items: center;
 }
 
-.o-link{
+.o-link {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: var(--secundary-color);
     font-size: 16px;
 }
 
-.o-box-title{
+.o-box-title {
     height: 10%;
     padding: 0 5%;
     display: flex;
     align-items: center;
 }
 
-.o-title{
+.o-title {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: var(--secundary-color);
@@ -35,26 +39,26 @@
     text-transform: uppercase;
 }
 
-.o-box-search{
+.o-box-search {
     flex-direction: column;
     align-items: flex-start;
     gap: 2vh;
 }
 
-.o-box-search-button{
+.o-box-search-button {
     padding: 0px;
     font-size: 18px;
 }
 
-.o-box-search-button mat-icon{
+.o-box-search-button mat-icon {
     font-size: 28px;
 }
 
-::ng-deep .mat-form-field-label-wrapper{
+::ng-deep .mat-form-field-label-wrapper {
     color: var(--secundary-color);
 }
 
-::ng-deep.mat-form-field-ripple{
+::ng-deep.mat-form-field-ripple {
     background-color: var(--secundary-color) !important;
 }
 
@@ -62,16 +66,16 @@
     color: var(--secundary-color) !important;
 }
 
-.o-box-inputs-search{
+.o-box-inputs-search {
     display: flex;
     gap: 2vh;
 }
 
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
     background-color: var(--tertiary-color) !important;
 }
 
-.o-box-right-buttons-init{
+.o-box-right-buttons-init {
     width: 20vh;
     height: 100%;
     background-color: var(--secundary-color);
@@ -82,32 +86,136 @@
     font-size: 14px;
 }
 
-.o-button-clean{
+.o-button-clean {
     background-color: var(--tertiary-color);
     color: var(--secundary-color);
     border: 2px solid var(--secundary-color);
 }
 
-.o-box-filters{
+.o-box-filters {
     height: 16%;
 }
 
-.o-box-fav{
+.o-box-fav {
     align-items: flex-start;
     justify-content: flex-end;
     height: auto;
 }
 
-.o-box-table{
+.o-box-table {
     padding-top: 2%;
     height: auto;
     flex-direction: column;
 }
 
-.o-img-personaje{
+.o-img-personaje {
     margin-top: 1vh;
 }
 
-::ng-deep .mat-icon-button{
-    color: var(--secundary-color);
+::ng-deep .mat-header-row {
+    background-color: var(--secundary-color);
+}
+
+::ng-deep .mat-header-cell {
+    color: var(--tertiary-color);
+
+}
+
+.o-box-cards {
+    display: none;
+}
+
+.o-buscar-movil{
+    display: none;
+}
+
+
+//Celulares y tablets
+@media (max-width: 1024px) {
+    .o-box {
+        grid-template-columns: 100%;
+        overflow-y: scroll;
+    }
+
+    .o-box-left {
+        display: none;
+    }
+
+    .o-box-links {
+        padding: 0 3%;
+    }
+
+    .o-box-table {
+        padding-top: 2%;
+        padding-bottom: 3%;
+    }
+
+}
+
+//Celulares 
+@media (max-width: 715px) {
+    .o-box-table {
+        display: none;
+    }
+
+    .o-box-search {
+        align-items: center;
+    }
+
+    .o-box-search-button {
+        width: 20vh;
+    }
+
+    .o-box-filters {
+        height: 22%;
+        padding-top: 2vh;
+    }
+
+    .o-box-fav {
+        display: none;
+    }
+
+    .o-box-cards {
+        display: block;
+        height: 100vh;
+        padding-top: 3vh;
+    }
+
+    .example-card {
+        max-width: 265px;
+        margin-bottom: 3vh;
+    }
+
+    .example-header-image {
+        background-size: cover;
+    }
+
+    .o-box-table-cards-box-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh 0;
+    }
+
+    .o-box-table-cards-table-data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 2vh;
+    }
+
+    .o-box-content-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 28vh;
+    }
+
+    .o-buscar-movil{
+        display: block;
+    }
+
+    .o-buscar-web{
+        display: none;
+    }
 }

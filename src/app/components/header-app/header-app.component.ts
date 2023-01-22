@@ -27,7 +27,6 @@ export class HeaderAppComponent implements OnInit {
 
   ngOnInit(): void {
     this.movil = sessionStorage.getItem('movil');
-    console.log(this.movil);
   }
 
 }
