@@ -1,9 +1,8 @@
 .o-box {
-    min-height: 100vh;
-    /* mobile viewport bug fix */
-    min-height: -webkit-fill-available;
     display: grid;
     grid-template-columns: 40% 60%;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .o-box-left {
@@ -168,6 +167,7 @@
 @media (max-width: 1024px) {
     .o-box {
         grid-template-columns: 100%;
+        height: 100vh;
     }
 
     .o-box-left {
