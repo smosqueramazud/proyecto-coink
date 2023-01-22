@@ -1,0 +1,113 @@
+.o-box{
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: 17% 83%;
+}
+
+.o-box-links{
+    height: 10%;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.o-link{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: var(--secundary-color);
+    font-size: 16px;
+}
+
+.o-box-title{
+    height: 10%;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.o-title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: var(--secundary-color);
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.o-box-search{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+.o-box-search-button{
+    padding: 0px;
+    font-size: 18px;
+}
+
+.o-box-search-button mat-icon{
+    font-size: 28px;
+}
+
+::ng-deep .mat-form-field-label-wrapper{
+    color: var(--secundary-color);
+}
+
+::ng-deep.mat-form-field-ripple{
+    background-color: var(--secundary-color) !important;
+}
+
+::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--secundary-color) !important;
+}
+
+.o-box-inputs-search{
+    display: flex;
+    gap: 2vh;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: var(--tertiary-color) !important;
+}
+
+.o-box-right-buttons-init{
+    width: 20vh;
+    height: 100%;
+    background-color: var(--secundary-color);
+    color: var(--tertiary-color);
+    box-shadow: 0px 3px 10px #0000001C;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.o-button-clean{
+    background-color: var(--tertiary-color);
+    color: var(--secundary-color);
+    border: 2px solid var(--secundary-color);
+}
+
+.o-box-filters{
+    height: 16%;
+}
+
+.o-box-fav{
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.o-box-table{
+    padding-top: 2%;
+    height: auto;
+    flex-direction: column;
+}
+
+.o-img-personaje{
+    margin-top: 1vh;
+}
+
+::ng-deep .mat-icon-button{
+    color: var(--secundary-color);
+}

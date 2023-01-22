@@ -20,6 +20,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /** 
+   * @method userInput 
+   * @description Método que se ejecuta cuando hay un cambio en el input de usuario
+   * @author Sebastian Mosquera Mazud
+   * @date 22/01/2023
+   */
   userInput(){
     if(this.user.length > 0){
       this.userText = true;
@@ -27,7 +33,13 @@ export class LoginComponent implements OnInit {
       this.userText = false;
     }
   }
-
+  
+  /** 
+   * @method userPass 
+   * @description Método que se ejecuta cuando hay un cambio en el input de contraseña
+   * @author Sebastian Mosquera Mazud
+   * @date 22/01/2023
+   */
   userPass(){
     if(this.password.length > 0){
       this.passwordText = true;
@@ -36,6 +48,12 @@ export class LoginComponent implements OnInit {
     }
   }
 
+    /** 
+   * @method userPass 
+   * @description Método que direcciona a la pantalla del home de la aplicación
+   * @author Sebastian Mosquera Mazud
+   * @date 22/01/2023
+   */
   goHome(){
     this.router.navigateByUrl('/home');
   }

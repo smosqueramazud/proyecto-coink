@@ -64,5 +64,17 @@ export class EndpointsService {
       let url = link;
       return this.http.get(url);
   }
+
+  /** 
+   * @method getPersonajeId 
+   * @description Metodo encargado de crear la peticion al endpoint que trae un personaje por su id
+   * @author Sebastian Mosquera
+   * @date 20/01/2023
+   */
+     getPersonajePorNombre(nombre:any){
+      let url = `${this.urlApi}/character/?name=${nombre}`;
+      return this.http.get(url);
+  }
+
 }
 
