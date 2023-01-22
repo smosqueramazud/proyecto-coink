@@ -3,6 +3,7 @@
 3. npm install dentro de la carpeta proyecto-coink
 4. ng serve! desde el editor de codigo de preferencia
 5. Debe ingresar campos en los input de Usuario y contraseña para habilitar el boton de iniciar sesion
+6. Para realizar el build se debe ejecutar el comando ng build en consola
 
 
 @author Sebastian Mosquera Mazud / 2023
