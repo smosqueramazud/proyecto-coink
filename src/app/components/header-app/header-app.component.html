@@ -1,0 +1,64 @@
+<mat-toolbar>
+    <div class="o-box w-100">
+        <div class="o-box-grid w-100">
+            <div class="w-100 o-box-grid-logo">
+                <img src="./assets/logos/logo-coink-lateral.svg" class="o-box-logo-app">
+
+                <button mat-icon-button class="example-icon menu-pc">
+                    <mat-icon>menu</mat-icon>
+                </button>
+
+                <button mat-icon-button class="example-icon menu-movil" (click)="snav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+
+            <div class="w-100">
+                <h1 class="text-center">BACKOFFICE</h1>
+            </div>
+
+            <div class="w-100 o-box-grid-icon">
+                <button mat-icon-button aria-label="Example icon-button with share icon">
+                    <mat-icon class="o-icon-cuenta">account_circle</mat-icon>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #snav [opened]="mobileQuery.matches ? 'false' : 'true'" [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="80" class="example-sidenav">
+        <mat-nav-list>
+            <div class="o-box-profile">
+                <div class="o-profile-img">
+                    <div class="o-circle"></div>
+                </div>
+                <div class="o-profile-title">
+                    <div class="o-box-name">
+                        <mat-icon class="o-icon-lock">lock</mat-icon>
+                        <p class="o-title-name">{{name}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Tarjetas Visa en dispensadores
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-list-item role="listitem"><span class="o-title-menu w-100 text-left">Crear dispensador</span></mat-list-item>
+                    <mat-list-item role="listitem"><span class="o-title-menu w-100 text-left">Monitorear y editar dispensadores</span></mat-list-item>
+                    <mat-list-item role="listitem"><span class="o-title-menu w-100 text-left">Solicitud tarjetas</span></mat-list-item>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+
+</mat-sidenav-container>
