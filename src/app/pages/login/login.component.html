@@ -31,13 +31,13 @@
             <div class="o-box-right-form-inputs">
                 <p>Correo electrónico</p>
                 <mat-icon matSuffix class="icon">person_outline</mat-icon>
-                <input class="input-field" type="text" placeholder="Ingrese el correo">
+                <input class="input-field" type="text" placeholder="Ingrese el correo" [(ngModel)]="user" (change)="userInput()">
             </div>
 
             <div class="o-box-right-form-inputs">
                 <p>Contraseña</p>
                 <mat-icon matSuffix class="icon">visibility_outline</mat-icon>
-                <input class="input-field" type="password" placeholder="Ingrese la contraseña">
+                <input class="input-field" type="password" placeholder="Ingrese la contraseña" [(ngModel)]="password" (change)="userPass()">
             </div>
 
             <div>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="o-box-right-form o-box-right-buttons">
-            <button mat-raised-button class="o-box-right-buttons-init">Iniciar sesión</button>
+            <button mat-raised-button class="o-box-right-buttons-init" [disabled]="(!userText || !passwordText)" (click)="goHome()">Iniciar sesión</button>
             <a class="o-box-right-links-a o-box-right-buttons-a">¿Olvidaste tu contraseña?</a>
         </div>
     </div>
